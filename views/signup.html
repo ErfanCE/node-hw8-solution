@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUP Page</title>
+
+    <link rel="stylesheet" href="stylesheets/signup.css" />
+  </head>
+  <body>
+    <div class="showcase">
+      <div class="error-alert">
+        <p>dorost bezan dg :/</p>
+      </div>
+
+      <form id="signupForm" class="signup-form">
+        <h3>Signup</h3>
+
+        <input
+          autocomplete="off"
+          class="signup-input"
+          type="text"
+          id="username"
+          placeholder="Username"
+        />
+        <input
+          autocomplete="off"
+          class="signup-input"
+          type="text"
+          id="password"
+          placeholder="Password"
+        />
+        <input
+          autocomplete="off"
+          class="signup-input"
+          type="text"
+          id="email"
+          placeholder="Email"
+        />
+
+        <select id="gender" class="signup-input">
+          <option value="male" selected>Male</option>
+          <option value="femail">Female</option>
+          <option value="other">Other</option>
+        </select>
+
+        <button class="signup-input signup-btn" type="submit">signup</button>
+
+        <a href="/" class="login-link">Already Have an Accout?</a>
+      </form>
+    </div>
+
+    <!-- scripts -->
+    <script src="javascripts/signup.js"></script>
+  </body>
+</html>

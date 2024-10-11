@@ -3,8 +3,15 @@ const { writeUsersData } = require('../utils/users-data-manipulation');
 
 const signup = async (request, response, next) => {
   try {
-    const { firstname, lastname, username, password, gender } = request.body;
+    const {
+      firstname,
+      lastname,
+      username,
+      password,
+      gender = 'not-set'
+    } = request.body;
 
+    // check duplication for username
     const isUsernameExists = !!users.find((user) => user.username === username);
     if (isUsernameExists) {
       return next(

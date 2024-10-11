@@ -5,5 +5,19 @@
     "username": "john_smith",
     "password": "user1234",
     "gender": "male"
+  },
+  {
+    "firstname": "behnam",
+    "lastname": "mohammadi",
+    "username": "behnam.mohammadi",
+    "password": "behnam1234",
+    "gender": "not-set"
+  },
+  {
+    "firstname": "reza",
+    "lastname": "mohammadi",
+    "username": "reza.mohammadi",
+    "password": "reza1234",
+    "gender": "male"
   }
 ]

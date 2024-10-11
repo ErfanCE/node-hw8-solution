@@ -1,5 +1,7 @@
+const { join } = require('node:path');
 const express = require('express');
-const apiRouter = require('./routes/api-routes');
+const apiRouter = require('./routes/api-route');
+const viewRouter = require('./routes/view-route');
 
 const app = express();
 const port = 8000;
@@ -8,8 +10,14 @@ const host = '127.0.0.1';
 // Request Body Parser
 app.use(express.json());
 
+// serve static
+app.use(express.static(join(__dirname, './public')));
+
 // API Routes
 app.use('/api', apiRouter);
+
+// View Routes
+app.use('/', viewRouter);
 
 // Unhandled Request(404)
 app.all('*', (request, response, next) => {
